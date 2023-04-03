@@ -4,8 +4,8 @@ from Crypto.PublicKey import RSA
 
 # Dados da transferência
 valor = 500.00
-chave_pix = '6f952cfc-22f3-4621-bc72-d96bf2c92628'
-banco_destino = 'c6bank.com.br'
+chave_pix = '99999999999'
+banco_destino = 'B'
 
 # Carregando chave pública RSA
 with open('chave_publica_rsa.pem', 'rb') as f:
@@ -15,7 +15,7 @@ with open('chave_publica_rsa.pem', 'rb') as f:
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock = ssl.wrap_socket(sock, ssl_version=ssl.PROTOCOL_TLSv1_2, ciphers="HIGH")
 
-banco_a_ip = 'bancointer.com.br'
+banco_a_ip = 'xx.xxx.xxx.xx'
 banco_a_porta = 80
 sock.connect((banco_a_ip, banco_a_porta))
 
@@ -34,7 +34,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock = ssl.wrap_socket(sock, ssl_version=ssl.PROTOCOL_TLSv1_2, ciphers="HIGH")
 sock = ssl.wrap_socket(sock, ssl_version=ssl.PROTOCOL_TLSv1_2, ciphers="HIGH")
 
-banco_b_ip = '162.159.152.26'
+banco_b_ip = 'xx.xxx.xxx.xxx'
 banco_b_porta = 80
 sock.connect((banco_b_ip, banco_b_porta))
 
